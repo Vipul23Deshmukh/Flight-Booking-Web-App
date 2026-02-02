@@ -1,7 +1,7 @@
 # Flight-Reservation-System
 Technologies : Spring Boot, rest API, JPA, React JS, MySQL
 
-E-DAC Project (may 2021, IACSD PUNE)
+
 
 User interface developed for Flight Reservation System using React.js Library
 Flight Reservation System is an Flight reservation/booking system.
