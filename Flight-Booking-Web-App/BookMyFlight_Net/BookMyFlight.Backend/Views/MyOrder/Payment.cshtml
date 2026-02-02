@@ -1,0 +1,88 @@
+﻿@model BookMyFlight.Backend.Models.EntityOrder
+
+<div class="row justify-content-center mt-5 mb-5 px-3">
+    <div class="col-md-8 col-lg-5">
+        <div class="premium-card shadow-2xl border-0 animate-fade-in overflow-hidden" style="border-radius: 24px;">
+            <div class="premium-card-header py-5 text-center" style="background: var(--gradient-blue); border-bottom: 4px solid var(--accent-gold);">
+                <div class="header-badge mb-3 d-inline-block">
+                    <div class="pulse-icon">
+                        <i class="fas fa-credit-card text-white fa-2x"></i>
+                    </div>
+                </div>
+                <h2 class="fw-800 text-white mb-1">Secure Payment</h2>
+                <p class="mb-0 text-white opacity-75 small text-uppercase fw-600">Step 2: Payment Processing</p>
+            </div>
+            <div class="premium-card-body p-4 p-md-5 text-center bg-white">
+                <div class="payment-summary-box p-4 rounded-4 mb-4" style="background: #f8fafc; border: 2px dashed #e2e8f0;">
+                    <p class="text-muted small fw-bold mb-1 text-uppercase letter-spacing-1">Final Payable Amount</p>
+                    <div class="h1 fw-800 text-primary-blue mb-0">₹@Model.Amount</div>
+                </div>
+                
+                <div class="payment-info mb-4 text-start">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-user-circle me-3 text-primary-blue"></i>
+                        <span class="small fw-600">@Model.Name</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-envelope-open me-3 text-primary-blue"></i>
+                        <span class="small fw-600">@Model.Email</span>
+                    </div>
+                </div>
+
+                <form id="payment-form" method="post" action="/Payment">
+                    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
+                    <input type="hidden" name="razorpay_order_id" id="razorpay_order_id" />
+                    <input type="hidden" name="razorpay_signature" id="razorpay_signature" />
+                    
+                    <button id="rzp-button1" class="btn btn-premium-checkout w-100 py-3 mt-2 shadow-lg">
+                        <i class="fas fa-shield-alt me-2"></i> PAY NOW SECURELY
+                    </button>
+                    
+                    <div class="mt-4 pt-3 border-top border-light">
+                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" alt="Razorpay" height="15" class="opacity-50">
+                        <p class="x-small text-muted mt-2 mb-0">Trusted by over 10 million businesses</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-3 d-flex justify-content-center gap-3 opacity-50 x-small fw-800 text-muted">
+            <span>PCI-DSS COMPLIANT</span>
+            <span>•</span>
+            <span>256-BIT ENCRYPTION</span>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+    var options = {
+        key: "@ViewBag.Key",
+        amount: parseInt("@ViewBag.Amount"),
+        currency: "INR",
+        name: "Flight Booking",
+        description: "Ticket Payment",
+        order_id: "@ViewBag.OrderId",
+
+        prefill: {
+            name: "@Model.Name",
+            email: "@Model.Email",
+            contact: "@Model.Mobile"
+        },
+
+        handler: function (response) {
+            document.getElementById("razorpay_payment_id").value = response.razorpay_payment_id;
+            document.getElementById("razorpay_order_id").value = response.razorpay_order_id;
+            document.getElementById("razorpay_signature").value = response.razorpay_signature;
+            document.getElementById("payment-form").submit();
+        }
+    };
+
+    var rzp1 = new Razorpay(options);
+
+    document.getElementById("rzp-button1").onclick = function (e) {
+        e.preventDefault();
+        rzp1.open();
+    };
+</script>

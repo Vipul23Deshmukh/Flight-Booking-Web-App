@@ -1,0 +1,224 @@
+:root {
+    --sidebar-width: 260px;
+    --sidebar-collapsed-width: 80px;
+    --admin-bg: #f4f7fa;
+    --admin-card-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+    --admin-primary: #4e73df;
+    --admin-secondary: #858796;
+    --admin-success: #1cc88a;
+    --admin-info: #36b9cc;
+    --admin-warning: #f6c23e;
+    --admin-danger: #e74a3b;
+    --admin-navy: #001529;
+}
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--admin-bg);
+}
+
+/* Sidebar Styling */
+.admin-sidebar {
+    width: var(--sidebar-width);
+    background: var(--admin-navy);
+    color: #fff;
+    transition: all 0.3s ease;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar-menu {
+    padding: 1rem 0;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: var(--admin-primary);
+}
+
+.menu-item i {
+    width: 25px;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.collapsed .menu-item span {
+    display: none;
+}
+
+/* Main Content Area */
+.admin-main {
+    flex-grow: 1;
+    margin-left: var(--sidebar-width);
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.admin-main.expanded {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+/* KPI Cards */
+.kpi-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--admin-card-shadow);
+    border: none;
+    transition: transform 0.2s;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.kpi-info h6 {
+    color: var(--admin-secondary);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.kpi-info h3 {
+    margin-bottom: 0;
+    font-weight: 800;
+}
+
+/* Analytics Section */
+.glass-panel {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--admin-card-shadow);
+    height: 100%;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+/* Advanced Table */
+.admin-table-container {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.admin-table th {
+    padding: 1rem;
+    color: var(--admin-secondary);
+    font-weight: 700;
+    border-bottom: 1px solid #edf2f9;
+}
+
+.admin-table tr:not(.header-row) {
+    background: #fff;
+    box-shadow: var(--admin-card-shadow);
+}
+
+.admin-table td {
+    padding: 1.25rem 1rem;
+}
+
+.admin-table tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.admin-table tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.status-active {
+    background: #e6f9f1;
+    color: var(--admin-success);
+}
+
+.status-inactive {
+    background: #feecef;
+    color: var(--admin-danger);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .admin-sidebar {
+        left: -100%;
+    }
+
+    .admin-sidebar.show {
+        left: 0;
+        width: var(--sidebar-width);
+    }
+
+    .admin-main {
+        margin-left: 0 !important;
+    }
+}

@@ -1,0 +1,220 @@
+﻿@model BookMyFlight.Backend.Models.EntityOrder
+
+<div class="row justify-content-center mt-5 mb-5 px-3">
+    <div class="col-md-8 col-lg-5">
+        <div class="premium-card shadow-2xl border-0 animate-fade-in overflow-hidden" style="border-radius: 24px;">
+            <!-- Header Section -->
+            <div class="premium-card-header py-5 text-center" style="background: var(--gradient-blue); border-bottom: 4px solid var(--accent-gold);">
+                <div class="header-badge mb-3 d-inline-block">
+                    <div class="pulse-icon">
+                        <i class="fas fa-file-invoice-dollar text-white fa-2x"></i>
+                    </div>
+                </div>
+                <h2 class="fw-800 text-white mb-1 letter-spacing-tight">Confirm Booking</h2>
+                <p class="mb-0 text-white opacity-75 small text-uppercase fw-600">Secure Checkout Process</p>
+            </div>
+            
+            <div class="premium-card-body p-4 p-md-5 bg-white">
+                <form method="post" action="/createorder" id="checkoutForm">
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger rounded-4 shadow-sm border-0 animate-shake mb-4">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-exclamation-circle fs-4 me-3"></i>
+                                <span class="fw-600">@TempData["Error"]</span>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="section-divider mb-4">
+                        <span class="bg-white px-3 text-muted small fw-bold">CONTACT INFORMATION</span>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-12">
+                            <label class="form-label-premium">Passenger Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user text-muted"></i>
+                                <input type="text" name="Name" class="form-control premium-input-modern" placeholder="Full Name" required value="@Model.Name" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-premium">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope text-muted"></i>
+                                <input type="email" name="Email" class="form-control premium-input-modern" placeholder="email@example.com" required value="@Model.Email" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label-premium">Mobile Number</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone text-muted"></i>
+                                <input type="text" name="Mobile" class="form-control premium-input-modern" placeholder="10-digit mobile" required pattern="[0-9]{10}" maxlength="10" value="@Model.Mobile" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary-card p-4 rounded-4 mb-5" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                        <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-light">
+                            <h6 class="mb-0 fw-800 text-secondary-blue">Booking Summary</h6>
+                            <span class="badge rounded-pill" style="background: var(--accent-gold); color: var(--secondary-blue); font-weight: 700;">PROCESSED</span>
+                        </div>
+                        
+                        <div class="summary-details mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Booking Reference</span>
+                                <span class="fw-700 text-dark">#@Model.Id</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Travel Class</span>
+                                <span class="fw-700 text-dark">Economy Premium</span>
+                            </div>
+                        </div>
+
+                        <div class="total-payable px-3 py-3 rounded-3" style="background: #fff; border: 1px solid #e2e8f0;">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="small fw-600 text-muted text-uppercase mb-1">Total Payable</div>
+                                    <div class="h3 mb-0 fw-800 text-primary-blue">₹@Model.Amount</div>
+                                </div>
+                                <div class="text-end text-success">
+                                    <i class="fas fa-shield-check fs-4 mb-1"></i>
+                                    <div class="x-small fw-800 text-uppercase letter-spacing-1">Verified</div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="Amount" value="@Model.Amount" />
+                    </div>
+
+                    <input type="hidden" name="UserId" value="@Model.UserId" />
+                    <input type="hidden" name="Id" value="@Model.Id" />
+
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-premium-checkout w-100 py-3 shadow-lg">
+                            Continue to Secure Payment <i class="fas fa-arrow-right ms-2 fs-7"></i>
+                        </button>
+                        
+                        <div class="text-center mt-3">
+                            <a href="http://localhost:3000" class="btn btn-link text-muted text-decoration-none small fw-600">
+                                <i class="fas fa-times me-2"></i> Cancel and go back
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="card-footer py-4 bg-light border-0 text-center">
+                <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 opacity-75">
+                    <img src="https://checkout.razorpay.com/v1/checkout.js" alt="Verified" style="display:none">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-lock text-primary-blue"></i>
+                        <span class="x-small fw-800 text-muted">SSL ENCRYPTED</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-credit-card text-primary-blue"></i>
+                        <span class="x-small fw-800 text-muted">SECURE GATEWAY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .letter-spacing-tight { letter-spacing: -0.5px; }
+    .letter-spacing-1 { letter-spacing: 1px; }
+    .x-small { font-size: 0.65rem; }
+    .fw-600 { font-weight: 600; }
+    
+    .section-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .section-divider::before, .section-divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .form-label-premium {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--secondary-blue);
+        margin-bottom: 0.5rem;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .input-with-icon {
+        position: relative;
+    }
+    .input-with-icon i {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+    }
+    .premium-input-modern {
+        padding: 0.8rem 1rem 0.8rem 2.8rem !important;
+        border: 2px solid #edf2f7 !important;
+        border-radius: 12px !important;
+        background: #f8fafc !important;
+        font-weight: 500 !important;
+        transition: all 0.2s !important;
+    }
+    .premium-input-modern:focus {
+        border-color: var(--primary-blue) !important;
+        background: #fff !important;
+        box-shadow: 0 0 0 4px rgba(0, 61, 138, 0.05) !important;
+    }
+
+    .btn-premium-checkout {
+        background: var(--gradient-blue);
+        color: white;
+        border: none;
+        border-radius: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 1rem !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+    }
+    .btn-premium-checkout:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 61, 138, 0.3);
+        color: white;
+    }
+
+    .header-badge {
+        background: rgba(255,255,255,0.2);
+        padding: 15px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .pulse-icon {
+        animation: pulse-btn 2s infinite;
+    }
+    
+    @@keyframes pulse-btn {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .shadow-2xl {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    @@keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+    }
+    .animate-shake { animation: shake 0.4s ease-in-out 0s 1; }
+</style>

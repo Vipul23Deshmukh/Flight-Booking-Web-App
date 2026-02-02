@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f05b0663.css",
+    "main.js": "/static/js/main.fd67f506.js",
+    "static/js/213.cf3cf9ac.chunk.js": "/static/js/213.cf3cf9ac.chunk.js",
+    "static/js/455.4c3c26ed.chunk.js": "/static/js/455.4c3c26ed.chunk.js",
+    "static/js/453.cfd3e928.chunk.js": "/static/js/453.cfd3e928.chunk.js",
+    "static/media/plane2.jpg": "/static/media/plane2.b856a88fffa68c0557f7.jpg",
+    "static/media/plane1.jpg": "/static/media/plane1.6b83bfbf58f309722348.jpg",
+    "static/media/homepage.jpg": "/static/media/homepage.c1fde98acfc2159a9765.jpg",
+    "static/media/plane3.jpg": "/static/media/plane3.7b3c56dbc65bbcecf719.jpg",
+    "static/media/travel.jpg": "/static/media/travel.4cb512559140c595a388.jpg",
+    "static/media/planebg1.jpg": "/static/media/planebg1.246c1738d58835d761f8.jpg",
+    "static/media/plane5.jpg": "/static/media/plane5.28ce0fc09a6ba2247f01.jpg",
+    "static/media/travelling.png": "/static/media/travelling.ba69dc0a86b19e35fc31.png",
+    "static/media/magnifying-glass.png": "/static/media/magnifying-glass.d8b94be589b6f9b927bb.png",
+    "index.html": "/index.html",
+    "main.f05b0663.css.map": "/static/css/main.f05b0663.css.map",
+    "main.fd67f506.js.map": "/static/js/main.fd67f506.js.map",
+    "213.cf3cf9ac.chunk.js.map": "/static/js/213.cf3cf9ac.chunk.js.map",
+    "455.4c3c26ed.chunk.js.map": "/static/js/455.4c3c26ed.chunk.js.map",
+    "453.cfd3e928.chunk.js.map": "/static/js/453.cfd3e928.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f05b0663.css",
+    "static/js/main.fd67f506.js"
+  ]
+}

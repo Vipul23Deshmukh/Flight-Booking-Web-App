@@ -1,0 +1,2361 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.14.0.0",
+        "fileVersion": "4.14.0-3.25465.8 (b0a9adbf)",
+        "semanticVersion": "4.14.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "RZ2001",
+          "level": "error",
+          "message": "The 'model' directive may only occur once per document.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Views/MyOrder/Index.cshtml",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "RZ2001",
+          "level": "error",
+          "message": "The 'model' directive may only occur once per document.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Views/MyOrder/Payment.cshtml",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Home_Index_cshtml.g.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 67,
+                  "endLine": 36,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property '_OrderDetails' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 16,
+                  "endLine": 19,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 28,
+                  "endLine": 25,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 78,
+                  "endLine": 33,
+                  "endColumn": 99
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 24,
+                  "endLine": 33,
+                  "endColumn": 99
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 80,
+                  "endLine": 34,
+                  "endColumn": 102
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 25,
+                  "endLine": 34,
+                  "endColumn": 102
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 82,
+                  "endLine": 35,
+                  "endColumn": 105
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 26,
+                  "endLine": 35,
+                  "endColumn": 105
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 22,
+                  "endLine": 39,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 232,
+                  "endLine": 89,
+                  "endColumn": 234
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 233,
+                  "endLine": 104,
+                  "endColumn": 235
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 132,
+                  "startColumn": 233,
+                  "endLine": 132,
+                  "endColumn": 235
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 215,
+                  "startColumn": 236,
+                  "endLine": 215,
+                  "endColumn": 238
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 263,
+                  "startColumn": 236,
+                  "endLine": 263,
+                  "endColumn": 238
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 283,
+                  "startColumn": 241,
+                  "endLine": 283,
+                  "endColumn": 243
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 297,
+                  "startColumn": 241,
+                  "endLine": 297,
+                  "endColumn": 243
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 311,
+                  "startColumn": 241,
+                  "endLine": 311,
+                  "endColumn": 243
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Services/FlightServiceImpl.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 20,
+                  "endLine": 88,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Home_Privacy_cshtml.g.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 67,
+                  "endLine": 36,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_MyOrder_PaymentSuccess_cshtml.g.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 67,
+                  "endLine": 44,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_MyOrder_Payment_cshtml.g.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 234,
+                  "endLine": 125,
+                  "endColumn": 236
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Services/FlightServiceImpl.cs",
+                "region": {
+                  "startLine": 155,
+                  "startColumn": 20,
+                  "endLine": 155,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared_Error_cshtml.g.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 67,
+                  "endLine": 44,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views__ViewStart_cshtml.g.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 67,
+                  "endLine": 36,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Users' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 28,
+                  "endLine": 12,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Flights' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 30,
+                  "endLine": 13,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Bookings' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 31,
+                  "endLine": 14,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Passengers' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 33,
+                  "endLine": 15,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Tickets' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 30,
+                  "endLine": 16,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'AuditLogs' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 32,
+                  "endLine": 17,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Seats' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 28,
+                  "endLine": 18,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views__ViewImports_cshtml.g.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 67,
+                  "endLine": 36,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 31,
+                  "endLine": 109,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'json' in 'EntityOrder? JsonSerializer.Deserialize<EntityOrder>(string json, JsonSerializerOptions? options = null)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 61,
+                  "endLine": 111,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 21,
+                  "endLine": 111,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 113,
+                  "startColumn": 17,
+                  "endLine": 113,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 42,
+                  "endLine": 89,
+                  "endColumn": 49
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 236,
+                  "endLine": 61,
+                  "endColumn": 238
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 236,
+                  "endLine": 75,
+                  "endColumn": 238
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Username' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Fname' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 23,
+                  "endLine": 18,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 23,
+                  "endLine": 18,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 23,
+                  "endLine": 21,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 23,
+                  "endLine": 21,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Phone' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 23,
+                  "endLine": 24,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 23,
+                  "endLine": 24,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/User.cs",
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 23,
+                  "endLine": 30,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'SeatNumber' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Seat.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Seat.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'ClassType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Seat.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 23,
+                  "endLine": 25,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Seat.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 23,
+                  "endLine": 25,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Pname' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Passenger.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 23,
+                  "endLine": 17,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Passenger.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 23,
+                  "endLine": 17,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Gender' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Passenger.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 23,
+                  "endLine": 21,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Passenger.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 23,
+                  "endLine": 21,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Source' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Flight.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 23,
+                  "endLine": 16,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Flight.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 23,
+                  "endLine": 16,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Destination' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Flight.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/Flight.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Action' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/AuditLog.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/AuditLog.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 23,
+                  "endLine": 19,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Details' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/AuditLog.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 23,
+                  "endLine": 22,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/AuditLog.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 23,
+                  "endLine": 22,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'IpAddress' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/AuditLog.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 23,
+                  "endLine": 28,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Entities/AuditLog.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 23,
+                  "endLine": 28,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Username' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/Login.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/Login.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/Login.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/Login.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Pass1' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/ListPassenger.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 32,
+                  "endLine": 11,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/ListPassenger.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 32,
+                  "endLine": 11,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Id' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Mobile' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 23,
+                  "endLine": 9,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 23,
+                  "endLine": 9,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'TransactionId' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 23,
+                  "endLine": 11,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 23,
+                  "endLine": 11,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'OrderId' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Models/EntityOrder.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Repositories/UserRepository.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 20,
+                  "endLine": 19,
+                  "endColumn": 104
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Repositories/TicketRepository.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 39,
+                  "endLine": 23,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Repositories/TicketRepository.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 39,
+                  "endLine": 25,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Repositories/TicketRepository.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 39,
+                  "endLine": 54,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Repositories/TicketRepository.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 39,
+                  "endLine": 56,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_MyOrder_Index_cshtml.g.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 234,
+                  "endLine": 89,
+                  "endColumn": 236
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'byte[] Encoding.GetBytes(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Program.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 80,
+                  "endLine": 47,
+                  "endColumn": 112
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'Views_Shared__Layout.__tagHelperStringValueBuffer' is never used",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__Layout_cshtml.g.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 24,
+                  "endLine": 53,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'Views_Shared__ValidationScriptsPartial.__tagHelperStringValueBuffer' is never used",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_Shared__ValidationScriptsPartial_cshtml.g.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 24,
+                  "endLine": 43,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'Views_MyOrder_Payment.__tagHelperStringValueBuffer' is never used",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_MyOrder_Payment_cshtml.g.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 24,
+                  "endLine": 52,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'Views_MyOrder_Index.__tagHelperStringValueBuffer' is never used",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/obj/Debug/net8.0/Microsoft.CodeAnalysis.Razor.Compiler/Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator/Views_MyOrder_Index_cshtml.g.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 24,
+                  "endLine": 52,
+                  "endColumn": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
+          "ruleId": "CA1869",
+          "level": "note",
+          "message": "Avoid creating a new 'JsonSerializerOptions' instance for every serialization operation. Cache and reuse instances instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Filters/AuditLogFilter.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 85,
+                  "endLine": 38,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1825",
+          "level": "note",
+          "message": "Avoid unnecessary zero-length array allocations.  Use Array.Empty<string>() instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Program.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 13,
+                  "endLine": 101,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Program.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 13,
+                  "endLine": 101,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "value"
+            }
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' to generate the regular expression implementation at compile-time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 100,
+                  "endLine": 52,
+                  "endColumn": 182
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "SYSLIB1045",
+          "level": "note",
+          "message": "Use 'GeneratedRegexAttribute' to generate the regular expression implementation at compile-time.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/Admin/OneDrive/Desktop/Git_UpdatedProject/Flight-Booking/Flight-Reservation-System-Spring-boot-React-MySql-main/BookMyFlight_Net/BookMyFlight.Backend/Controllers/MyOrderController.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 106,
+                  "endLine": 58,
+                  "endColumn": 185
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1825": {
+          "id": "CA1825",
+          "shortDescription": "Avoid zero-length array allocations",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1825",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1861": {
+          "id": "CA1861",
+          "shortDescription": "Avoid constant arrays as arguments",
+          "fullDescription": "Constant arrays passed as arguments are not reused when called repeatedly, which implies a new array is created each time. Consider extracting them to 'static readonly' fields to improve performance if the passed array is not mutated within the called method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1861",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1869": {
+          "id": "CA1869",
+          "shortDescription": "Cache and reuse 'JsonSerializerOptions' instances",
+          "fullDescription": "Avoid creating a new 'JsonSerializerOptions' instance for every serialization operation. Cache and reuse instances instead. Single use 'JsonSerializerOptions' instances can substantially degrade the performance of your application.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1869",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS0169": {
+          "id": "CS0169",
+          "shortDescription": "Field is never used",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0169)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS1998": {
+          "id": "CS1998",
+          "shortDescription": "Async method lacks 'await' operators and will run synchronously",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1998)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8600": {
+          "id": "CS8600",
+          "shortDescription": "Converting null literal or possible null value to non-nullable type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8601": {
+          "id": "CS8601",
+          "shortDescription": "Possible null reference assignment.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8601)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Dereference of a possibly null reference.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8603": {
+          "id": "CS8603",
+          "shortDescription": "Possible null reference return.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "RZ2001": {
+          "id": "RZ2001",
+          "shortDescription": "The 'model' directive may only occur once per document.",
+          "defaultLevel": "error",
+          "properties": {
+            "category": "Razor",
+            "isEnabledByDefault": true
+          }
+        },
+        "SYSLIB1045": {
+          "id": "SYSLIB1045",
+          "shortDescription": "Convert to 'GeneratedRegexAttribute'.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/syslib-diagnostics/syslib1045",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true
+          }
+        }
+      }
+    }
+  ]
+}

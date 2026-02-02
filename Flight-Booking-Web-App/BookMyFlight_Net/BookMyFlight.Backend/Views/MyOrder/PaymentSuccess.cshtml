@@ -1,0 +1,111 @@
+﻿@model BookMyFlight.Backend.Models.EntityOrder
+
+@model BookMyFlight.Backend.Models.EntityOrder
+
+<div class="row justify-content-center mt-5 mb-5 px-3">
+    <div class="col-md-7">
+        <div class="premium-card shadow-2xl border-0 animate-fade-in overflow-hidden" style="border-radius: 24px;">
+            <div class="success-bg py-5 text-center" style="background: var(--bg-light); border-bottom: 1px solid #e2e8f0;">
+                <div class="check-circle animate-scale-up mb-3" style="background: #22c55e;">
+                    <i class="fas fa-check text-white"></i>
+                </div>
+                <h2 class="fw-800 text-success mb-2 letter-spacing-tight">Booking Confirmed!</h2>
+                <p class="text-muted px-4 small fw-600 text-uppercase letter-spacing-1">Your journey with BookMyFlight is set</p>
+            </div>
+            
+            <div class="premium-card-body p-4 p-md-5 bg-white">
+                <div class="receipt-container mb-4 shadow-sm border border-light rounded-4 overflow-hidden">
+                    <div class="bg-success-light p-3 text-center border-bottom border-success-subtle">
+                         <span class="text-success fw-800 small text-uppercase letter-spacing-1">
+                             <i class="fas fa-shield-check me-2"></i> Transaction Successful
+                         </span>
+                    </div>
+                    
+                    <div class="p-4 bg-white">
+                        <div class="row g-4 text-center text-md-start">
+                            <div class="col-md-6">
+                                <span class="d-block small text-muted fw-bold text-uppercase mb-1">Booking Reference</span>
+                                <span class="h5 fw-800 text-dark">#@Model.Id</span>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <span class="d-block small text-muted fw-bold text-uppercase mb-1">Electronic Ticket</span>
+                                <span class="h5 fw-800 text-primary-blue">BF-@Model.Id</span>
+                            </div>
+                            <div class="col-12"><div class="border-top border-light opacity-50"></div></div>
+                            <div class="col-md-6">
+                                <span class="d-block small text-muted fw-bold text-uppercase mb-1">Fare Collected</span>
+                                <span class="h4 mb-0 fw-800 text-success">₹@Model.Amount</span>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <span class="d-block small text-muted fw-bold text-uppercase mb-1">Confirmed Date</span>
+                                <span class="h6 mb-0 fw-700 text-dark">@DateTime.Now.ToString("dd MMM yyyy")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert shadow-sm border-0 rounded-4 p-4 mb-5" style="background: #eff6ff; border-left: 4px solid #3b82f6;">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary text-white rounded-circle p-3 me-4 d-none d-sm-block">
+                            <i class="fas fa-paper-plane fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-1 fw-800 text-primary-blue">Digital Boarding Pass Ready</h6>
+                            <p class="mb-0 small text-muted fw-500">We've generated your e-ticket. You can now download it as a PDF, print it, or email it to your inbox.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-3">
+                    <a href="http://localhost:3000/ticket?bookingId=@Model.Id" class="btn btn-premium-ticket py-3 shadow-lg">
+                        <i class="fas fa-ticket-alt me-2 fs-5"></i> View & Print E-Ticket
+                    </a>
+                    
+                    <a href="http://localhost:3000" class="btn btn-outline-secondary py-3 border-0 fw-700 bg-light text-muted">
+                        <i class="fas fa-home me-2"></i> Back to Flight Search
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .letter-spacing-tight { letter-spacing: -0.5px; }
+    .letter-spacing-1 { letter-spacing: 1px; }
+    .fw-800 { font-weight: 800; }
+    .fw-700 { font-weight: 700; }
+    .fw-600 { font-weight: 600; }
+    .fw-500 { font-weight: 500; }
+    
+    .bg-success-light { background-color: #f0fdf4; }
+    .shadow-2xl {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-premium-ticket {
+        background: var(--gradient-blue);
+        color: white;
+        border: none;
+        border-radius: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-premium-ticket:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(0, 61, 138, 0.3);
+        color: white;
+    }
+
+    .animate-scale-up {
+        animation: scale-up 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @@keyframes scale-up {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+</style>
+

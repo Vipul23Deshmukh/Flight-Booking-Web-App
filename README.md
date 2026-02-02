@@ -1,31 +1,108 @@
 # Flight-Booking-Web-App
-A modern web-based flight booking system built with React, ASP.NET Core, and MySQL — enabling secure user registration, flight search, ticket booking, payments, and admin management.
 
-✈️ Flight Ticket Booking Web Application
-In today’s fast-paced digital world, travelers expect quick, reliable, and user-friendly online services. This project provides a complete web-based solution for searching, booking, and managing flight tickets efficiently.
+\# ✈️ Flight Booking Web App
 
-🔹 Key Features
-Secure user registration & login
 
-Search flights by source, destination, and travel date
 
-Instant ticket booking with integrated payment flow
+A modern, full‑stack \*\*Flight Ticket Booking Web Application\*\* that enables users to search, book, and manage flight tickets online with ease. Built using \*\*React.js\*\*, \*\*ASP.NET Core Web API\*\*, and \*\*MySQL\*\*, the system provides a secure, scalable, and user‑friendly solution for travel planning.
 
-Electronic ticket generation
 
-Admin dashboard to manage flights, schedules, and availability
 
-🔹 Tech Stack
-Frontend: React.js  – responsive and interactive UI
+---
 
-Backend: ASP.NET Core Web API – business logic, validation, secure communication
 
-Database: MySQL – reliable storage for users, flights, and bookings
 
-🔹 Architecture
-Layered design separating presentation, business logic, and data access
+\## 🚀 Features
 
-Ensures scalability, maintainability, and security
 
-🎯 Purpose
-This project demonstrates the practical application of modern web development technologies and software engineering principles to deliver a real-world, efficient, and user-centric flight booking platform.
+
+\- 🔐 \*\*User Authentication\*\* – Secure registration and login
+
+\- 🛫 \*\*Flight Search\*\* – Search flights by source, destination, and travel date
+
+\- 🎟️ \*\*Ticket Booking\*\* – Instant booking with integrated payment flow
+
+\- 📄 \*\*E‑Ticket Generation\*\* – Automatic electronic ticket creation
+
+\- 🛠️ \*\*Admin Dashboard\*\* – Manage flights, schedules, and availability
+
+\- ⚡ \*\*Responsive UI\*\* – Built with React.js for a smooth user experience
+
+
+
+---
+
+
+
+\## 🛠️ Tech Stack
+
+
+
+| Layer            | Technology                  |
+
+|------------------|-----------------------------|
+
+| Frontend         | React.js                    |
+
+| Backend          | ASP.NET Core Web API (.NET 8) |
+
+| Database         | MySQL                       |
+
+| Hosting/Cloud    | Azure (App Service, MySQL DB) |
+
+
+
+---
+
+
+
+\## 🏗️ Architecture
+
+
+
+The application follows a \*\*layered architecture\*\*:
+
+\- \*\*Presentation Layer\*\* – React.js frontend
+
+\- \*\*Business Logic Layer\*\* – ASP.NET Core Web API
+
+\- \*\*Data Access Layer\*\* – MySQL database
+
+
+
+This separation ensures \*\*scalability, maintainability, and security\*\*.
+
+
+
+---
+
+
+
+\## 📦 Installation \& Setup
+
+
+
+\### Prerequisites
+
+\- Node.js (v18+)
+
+\- .NET 8 SDK
+
+\- MySQL Server
+
+\- Git
+
+
+
+\### Steps
+
+1\. \*\*Clone the repository\*\*
+
+&nbsp;  ```bash
+
+&nbsp;  git clone https://github.com/<owner>/Flight-Booking-Web-App.git
+
+&nbsp;  cd Flight-Booking-Web-App
+
+
+
