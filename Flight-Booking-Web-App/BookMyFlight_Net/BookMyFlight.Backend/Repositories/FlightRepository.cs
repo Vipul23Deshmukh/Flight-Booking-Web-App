@@ -15,9 +15,15 @@ namespace BookMyFlight.Backend.Repositories
 
         public List<Flight> FindByCondition(string source, string destination, DateOnly travelDate)
         {
+            string s = source.Trim().ToLower();
+            string d = destination.Trim().ToLower();
+            
             return _context.Flights
                 .Include(f => f.Seats)
-                .Where(f => f.Source == source && f.Destination == destination && f.TravelDate == travelDate)
+                .AsNoTracking()
+                .Where(f => f.Source.Trim().ToLower() == s && 
+                            f.Destination.Trim().ToLower() == d && 
+                            f.TravelDate == travelDate)
                 .ToList();
         }
 

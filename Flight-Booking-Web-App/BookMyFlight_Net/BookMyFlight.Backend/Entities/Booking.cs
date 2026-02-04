@@ -35,9 +35,17 @@ namespace BookMyFlight.Backend.Entities
             Passengers = new List<Passenger>();
         }
 
+
         [JsonPropertyName("passengers")]
         public List<Passenger>? Passengers { get; set; }
 
+        [Column("razorpay_order_id")]
+        public string? RazorpayOrderId { get; set; }
 
+        [Column("razorpay_payment_id")]
+        public string? RazorpayPaymentId { get; set; }
+
+        [Column("transaction_id")]
+        public string? TransactionId { get; set; }
     }
 }

@@ -30,9 +30,11 @@ class SearchFlight extends Component {
 
         this.setState({ searched: false });
 
-        const { source: s, destination: d, travelDate: t } = this.state;
+        const { source, destination, travelDate: t } = this.state;
+        const normalizedSource = source.trim().toLowerCase();
+        const normalizedDest = destination.trim().toLowerCase();
 
-        this.service.getFlightsForUser(s, d, t).then(data => {
+        this.service.getFlightsForUser(normalizedSource, normalizedDest, t).then(data => {
             if (data && data.length > 0) {
                 const now = new Date();
                 const localTodayStr = now.toISOString().split('T')[0];
@@ -41,8 +43,13 @@ class SearchFlight extends Component {
                     const currentTimeInSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
 
                     data = data.filter(flight => {
-                        if (!flight.departureTime) return true;
-                        const [fHours, fMinutes, fSeconds] = flight.departureTime.split(':').map(Number);
+                        if (!flight.departureTime) return true; // Defensive check
+
+                        // Support both camelCase and PascalCase
+                        const depTime = flight.departureTime || flight.DepartureTime;
+                        if (!depTime) return true;
+
+                        const [fHours, fMinutes, fSeconds] = depTime.split(':').map(Number);
                         const flightTimeInSeconds = fHours * 3600 + (fMinutes || 0) * 60 + (fSeconds || 0);
                         return flightTimeInSeconds > currentTimeInSeconds;
                     });
@@ -51,7 +58,7 @@ class SearchFlight extends Component {
                 if (data.length > 0) {
                     this.props.history.push({
                         pathname: '/search-results',
-                        state: { flights: data, source: s, destination: d, date: t }
+                        state: { flights: data, source: source, destination: destination, date: t }
                     });
                 } else {
                     alert('No more flights available for today!!');

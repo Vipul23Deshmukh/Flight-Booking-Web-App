@@ -29,7 +29,7 @@ class Booking extends Component {
     }
 
     componentDidMount() {
-        if (!JSON.parse(localStorage.getItem("user"))) {
+        if (!JSON.parse(localStorage.getItem("user")) || !localStorage.getItem("token")) {
             this.props.history.push("/login")
         }
     }
@@ -39,6 +39,12 @@ class Booking extends Component {
     }
 
     goOnPassangers = () => {
+        if (!localStorage.getItem("token")) {
+            alert("Session expired. Please login again.");
+            this.props.history.push("/login");
+            return;
+        }
+
         if (this.state.numberOfSeatsToBook <= 0) {
             alert('Please select at least 1 passenger');
             return;
@@ -63,6 +69,10 @@ class Booking extends Component {
             this.props.history.push('/passengers')
         }).catch(error => {
             console.error("Booking error:", error);
+            if (error.response && error.response.status === 401) {
+                // Ignore 401 as api.js handles redirect
+                return;
+            }
             alert('Booking failed: ' + (error.message || 'Unknown error'));
         })
     }

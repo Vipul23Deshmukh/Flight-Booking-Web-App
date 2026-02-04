@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import amex from '../assets/images/amex.png';
 import visa from '../assets/images/visa.png';
 import mastercard from '../assets/images/mastercard.png';
-import BookingService from '../services/BookingService';
 import { withRouter } from "react-router";
 import Footer from './Footer';
 import Header from './Header';
@@ -13,30 +12,201 @@ class Payment extends Component {
         if (!localStorage.getItem('user')) {
             this.props.history.push('/login')
         } else {
-            this.service = new BookingService();
             this.state = {
-                ticketNumber: 0,
-                booking_date: null,
-                total_pay: 0,
-                name: ''
+                isProcessing: false,
+                errorMessage: '',
+                showRetry: false
             }
         }
     }
 
-    createTicket = (e) => {
-        e.preventDefault();
-        if (!e.target.closest("form").reportValidity()) return;
+    handlePayment = async () => {
+        // Prevent double-clicks
+        if (this.state.isProcessing) {
+            console.log('[Payment] Already processing, ignoring click');
+            return;
+        }
 
-        this.service.generateTicket(this.state).then(response => {
-            if (response && response.status === 200) {
-                this.props.history.push('/ticket')
-            } else {
-                alert("Payment failed or Booking not found. Please try again.");
+        this.setState({ isProcessing: true, errorMessage: '', showRetry: false });
+
+        try {
+            // Step 1: Validate localStorage data
+            const userJson = localStorage.getItem('user');
+            const bid = localStorage.getItem('bid');
+            const amount = localStorage.getItem('total_amount');
+
+            console.log('[Payment] LocalStorage Check:', {
+                hasUser: !!userJson,
+                hasBid: !!bid,
+                hasAmount: !!amount
+            });
+
+            if (!userJson) {
+                throw new Error('User not logged in. Please login again.');
             }
-        }).catch(error => {
-            console.error(error);
-            alert("An error occurred during payment processing.");
-        });
+
+            const user = JSON.parse(userJson);
+            console.log('[Payment] Parsed user:', user);
+
+            // Extract userId (support multiple formats)
+            const userId = user.userId || user.userid || user.UserId;
+            if (!userId) {
+                throw new Error('User ID not found. Please re-login.');
+            }
+
+            if (!bid || !amount) {
+                throw new Error('Booking information missing. Please start booking again.');
+            }
+
+            // Step 2: Call backend API to create Razorpay order
+            const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8980";
+            const createOrderUrl = `${apiUrl}/api/payment/create-order`;
+
+            console.log('[Payment] Creating order via API:', createOrderUrl);
+
+            const orderResponse = await fetch(createOrderUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    bookingId: bid,
+                    userId: userId,
+                    amount: parseFloat(amount),
+                    name: user.fname || user.username || 'Guest',
+                    email: user.email || 'noemail@example.com',
+                    mobile: user.phone || user.mobile || '0000000000'
+                })
+            });
+
+            if (!orderResponse.ok) {
+                const errorData = await orderResponse.json();
+                throw new Error(errorData.message || 'Failed to create payment order');
+            }
+
+            const orderData = await orderResponse.json();
+            console.log('[Payment] Order created:', orderData);
+
+            if (!orderData.success || !orderData.orderId) {
+                throw new Error('Invalid order response from server');
+            }
+
+            // Step 3: Check if Razorpay is loaded
+            if (typeof window.Razorpay === 'undefined') {
+                throw new Error('Razorpay SDK not loaded. Please refresh the page.');
+            }
+
+            // Step 4: Initialize Razorpay with order details
+            const options = {
+                key: orderData.key,
+                amount: orderData.amount, // Amount in paise
+                currency: orderData.currency,
+                name: "BookMyFlight",
+                description: "Flight Ticket Payment",
+                order_id: orderData.orderId,
+                prefill: {
+                    name: orderData.name,
+                    email: orderData.email,
+                    contact: orderData.mobile
+                },
+                theme: {
+                    color: "#003D8A"
+                },
+                handler: async (response) => {
+                    console.log('[Payment] Razorpay success:', response);
+                    await this.verifyPayment(response, bid, userId);
+                },
+                modal: {
+                    ondismiss: () => {
+                        console.log('[Payment] Payment cancelled by user');
+                        this.setState({
+                            isProcessing: false,
+                            errorMessage: 'Payment cancelled. You can try again.',
+                            showRetry: true
+                        });
+                    }
+                }
+            };
+
+            // Step 5: Open Razorpay checkout
+            const rzp = new window.Razorpay(options);
+
+            rzp.on('payment.failed', (response) => {
+                console.error('[Payment] Payment failed:', response.error);
+                this.setState({
+                    isProcessing: false,
+                    errorMessage: `Payment failed: ${response.error.description || 'Unknown error'}`,
+                    showRetry: true
+                });
+            });
+
+            console.log('[Payment] Opening Razorpay checkout...');
+            rzp.open();
+
+            // Reset processing state after opening (user can still interact if they cancel)
+            this.setState({ isProcessing: false });
+
+        } catch (error) {
+            console.error('[Payment] Error:', error);
+            this.setState({
+                isProcessing: false,
+                errorMessage: error.message || 'Payment initialization failed. Please try again.',
+                showRetry: true
+            });
+        }
+    }
+
+    verifyPayment = async (razorpayResponse, bookingId, userId) => {
+        try {
+            this.setState({ isProcessing: true, errorMessage: '', showRetry: false });
+
+            const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8980";
+            const verifyUrl = `${apiUrl}/api/payment/verify`;
+
+            console.log('[Payment] Verifying payment via API:', verifyUrl);
+
+            const verifyResponse = await fetch(verifyUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    razorpayPaymentId: razorpayResponse.razorpay_payment_id,
+                    razorpayOrderId: razorpayResponse.razorpay_order_id,
+                    razorpaySignature: razorpayResponse.razorpay_signature,
+                    bookingId: bookingId,
+                    userId: userId
+                })
+            });
+
+            if (!verifyResponse.ok) {
+                const errorData = await verifyResponse.json();
+                throw new Error(errorData.message || 'Payment verification failed');
+            }
+
+            const verifyData = await verifyResponse.json();
+            console.log('[Payment] Payment verified:', verifyData);
+
+            if (verifyData.success) {
+                // Store ticket number for retrieval
+                if (verifyData.ticketId) {
+                    localStorage.setItem('ticketId', verifyData.ticketId);
+                }
+
+                // Redirect to ticket page with booking ID
+                this.props.history.push(`/ticket?bookingId=${bookingId}`);
+            } else {
+                throw new Error(verifyData.message || 'Payment verification failed');
+            }
+
+        } catch (error) {
+            console.error('[Payment] Verification error:', error);
+            this.setState({
+                isProcessing: false,
+                errorMessage: `Verification failed: ${error.message}. Please contact support with your payment details.`,
+                showRetry: false
+            });
+        }
     }
 
     render() {
@@ -75,27 +245,45 @@ class Payment extends Component {
                                 <div className="alert alert-info border-0 shadow-sm small py-3 px-4 mb-4 text-start d-flex">
                                     <i className="fas fa-lock text-primary-blue mt-1 me-3 fs-5"></i>
                                     <div>
-                                        <strong>Secure Gateway:</strong> You will be redirected to our encrypted Razorpay partner to complete the transaction safely.
+                                        <strong>Secure Gateway:</strong> Powered by Razorpay - India's most trusted payment gateway with 256-bit encryption.
                                     </div>
                                 </div>
 
-                                <button onClick={() => {
-                                    const user = JSON.parse(localStorage.getItem('user'));
-                                    const bid = localStorage.getItem('bid');
-                                    const amount = localStorage.getItem('total_amount');
-                                    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8980";
-                                    const paymentUrl = `${apiUrl}/MyOrder/Index?` +
-                                        `bookingId=${bid}&` +
-                                        `userId=${user.userId}&` +
-                                        `amount=${amount}&` +
-                                        `name=${encodeURIComponent(user.fname || user.username)}&` +
-                                        `email=${encodeURIComponent(user.email)}&` +
-                                        `mobile=${encodeURIComponent(user.phone || '0000000000')}`;
-                                    window.location.href = paymentUrl;
-                                }}
-                                    className="btn btn-premium w-100 py-3 mb-3 fs-5 fw-bold">
-                                    Pay ₹{amount} Now
+                                <button
+                                    onClick={this.handlePayment}
+                                    disabled={this.state.isProcessing}
+                                    className="btn btn-premium w-100 py-3 mb-3 fs-5 fw-bold position-relative"
+                                    style={{ minHeight: '60px' }}
+                                >
+                                    {this.state.isProcessing ? (
+                                        <span>
+                                            <i className="fas fa-spinner fa-spin me-2"></i>
+                                            Processing...
+                                        </span>
+                                    ) : (
+                                        <span>
+                                            <i className="fas fa-lock me-2"></i>
+                                            Pay ₹{amount} Now
+                                        </span>
+                                    )}
                                 </button>
+
+                                {this.state.errorMessage && (
+                                    <div className="alert alert-danger small mb-3" role="alert">
+                                        <i className="fas fa-exclamation-triangle me-2"></i>
+                                        {this.state.errorMessage}
+                                    </div>
+                                )}
+
+                                {this.state.showRetry && (
+                                    <button
+                                        onClick={this.handlePayment}
+                                        className="btn btn-outline-primary w-100 py-2 mb-3"
+                                    >
+                                        <i className="fas fa-redo me-2"></i>
+                                        Retry Payment
+                                    </button>
+                                )}
 
                                 <p className="small text-muted mb-0">
                                     <i className="fas fa-info-circle me-1"></i> Your booking will be confirmed immediately after payment.

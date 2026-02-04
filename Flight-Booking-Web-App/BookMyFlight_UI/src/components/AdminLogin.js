@@ -22,21 +22,32 @@ export default class AdminLogin extends Component {
 
         this.service.validateUser(this.state.username, this.state.password)
             .then(response => {
-                if (response.status === 200) {
-                    if (response.data.isadmin === 1) {
-                        localStorage.setItem('user', JSON.stringify(response.data));
+                if (response.status === 200 && response.data) {
+                    // Support both camelCase and PascalCase just in case
+                    const token = response.data.token || response.data.Token;
+                    const user = response.data.user || response.data.User;
+
+                    if (user && (user.isadmin === 1 || user.Isadmin === 1)) {
+                        localStorage.setItem('token', token);
+                        localStorage.setItem('user', JSON.stringify(user));
                         this.props.history.push('/admin');
-                    } else {
+                    } else if (user) {
                         this.setState({
                             errormsg: 'Access Denied: You do not have administrator privileges.',
                             isLoading: false
                         });
+                    } else {
+                        throw new Error("Invalid response format: Missing user data");
                     }
                 }
             })
             .catch(error => {
+                console.error("Login detail error:", error);
+                const message = error.response?.data?.message || error.response?.data || error.message;
                 this.setState({
-                    errormsg: 'Invalid admin credentials.',
+                    errormsg: (message === "Unauthorized" || error.response?.status === 401)
+                        ? 'Invalid admin credentials.'
+                        : `Login error: ${message}`,
                     password: "",
                     isLoading: false
                 });
@@ -96,11 +107,23 @@ export default class AdminLogin extends Component {
                                         </div>
 
                                         <button
-                                            type="submit"
-                                            className="btn btn-gold w-100 py-3 fw-bold text-uppercase letter-spacing-1 shadow-lg border-0"
+                                            type="submit" // Keep type="submit" to trigger form's onSubmit
+                                            className="btn btn-navy-premium btn-block py-3 fw-bold text-uppercase shadow-lg transition-all"
                                             disabled={this.state.isLoading}
+                                            style={{
+                                                background: '#00264d',
+                                                color: '#ffc107',
+                                                border: '2px solid #ffc107',
+                                                borderRadius: '12px',
+                                                letterSpacing: '1.5px',
+                                                boxShadow: '0 8px 16px rgba(0,38,77,0.25)',
+                                                fontSize: '1.1rem'
+                                            }}
                                         >
-                                            {this.state.isLoading ? 'Verifying...' : 'Authenticate'}
+                                            {this.state.isLoading ?
+                                                <span><i className="fas fa-spinner fa-spin me-2"></i>Verifying...</span> :
+                                                <span><i className="fas fa-lock me-2"></i>Admin Secure Login</span>
+                                            }
                                         </button>
 
                                         {this.state.errormsg && (

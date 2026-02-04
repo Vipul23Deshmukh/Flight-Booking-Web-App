@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -63,12 +64,9 @@ builder.Services.AddControllers(options =>
 }).AddJsonOptions(options => 
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
 });
 builder.Services.AddSingleton<AuditLogFilter>();
-builder.Services.AddControllersWithViews().AddJsonOptions(options => 
-{
-    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-});
 
 // Add Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();

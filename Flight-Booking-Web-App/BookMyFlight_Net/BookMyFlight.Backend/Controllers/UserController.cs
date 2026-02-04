@@ -86,14 +86,14 @@ namespace BookMyFlight.Backend.Controllers
                 var token = _jwtService.GenerateToken(user);
                 return Ok(new
                 {
-                    Token = token,
-                    User = new
+                    token = token,
+                    user = new
                     {
-                        user.UserId,
-                        user.Username,
-                        user.Fname,
-                        user.Email,
-                        user.Isadmin
+                        userId = user.UserId,
+                        username = user.Username,
+                        fname = user.Fname,
+                        email = user.Email,
+                        isadmin = user.Isadmin
                     }
                 });
             }

@@ -40,21 +40,28 @@ export default class Login extends Component {
 
         if (this.state.username !== '' && this.state.password !== '') {
             this.service.validateUser(this.state.username, this.state.password).then(response => {
-                if (response.status === 200) {
+                if (response.status === 200 && response.data) {
                     // Extract token and user data from JWT response
-                    const { token, user } = response.data;
-                    localStorage.setItem('token', token);
-                    localStorage.setItem('user', JSON.stringify(user));
+                    // Support both camelCase and PascalCase for better resilience
+                    const token = response.data.token || response.data.Token;
+                    const user = response.data.user || response.data.User;
 
-                    if (user.isadmin === 0)
-                        this.props.history.push('/booking');
-                    else
-                        this.props.history.push('/admin');
+                    if (token && user) {
+                        localStorage.setItem('token', token);
+                        localStorage.setItem('user', JSON.stringify(user));
+
+                        if ((user.isadmin || user.Isadmin) === 0)
+                            this.props.history.push('/booking');
+                        else
+                            this.props.history.push('/admin');
+                    } else {
+                        throw new Error("Invalid response format");
+                    }
                 }
             }).catch(error => {
                 console.log(error);
                 this.setState({
-                    errormsg: 'Invalid username or password.',
+                    errormsg: error.response?.status === 401 ? 'Invalid username or password.' : 'Login failed: ' + (error.response?.data?.message || error.message),
                     password: "",
                     flag: true
                 });
@@ -95,7 +102,25 @@ export default class Login extends Component {
                                                         <input type="password" name="password" required value={this.state.password} onChange={e => this.setState({ password: e.target.value, flag: false, btn: true })} className="form-control" />
                                                     </div>
 
-                                                    <div className="card-footer" > <button type="submit" disabled={!this.state.btn} onClick={this.validateUser} className="subscribe btn btn-primary btn-block shadow-sm">Login</button></div>
+                                                    <div className="card-footer px-0 bg-transparent border-0 pt-4">
+                                                        <button
+                                                            type="submit"
+                                                            disabled={!this.state.btn}
+                                                            onClick={this.validateUser}
+                                                            className="btn btn-navy-premium btn-block py-3 fw-bold text-uppercase shadow-lg transition-all"
+                                                            style={{
+                                                                background: '#00264d', // Deeper Navy for better accessibility
+                                                                color: '#ffc107',      // Brighter Amber/Gold for accessibility contrast
+                                                                border: '2px solid #ffc107',
+                                                                borderRadius: '12px',
+                                                                letterSpacing: '1.5px',
+                                                                boxShadow: '0 8px 16px rgba(0,38,77,0.25)',
+                                                                fontSize: '1.1rem'
+                                                            }}
+                                                        >
+                                                            <i className="fas fa-sign-in-alt me-2"></i> Login to Account
+                                                        </button>
+                                                    </div>
 
                                                 </form>
                                             </div>
