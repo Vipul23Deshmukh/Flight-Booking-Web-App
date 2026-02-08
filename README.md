@@ -1,108 +1,61 @@
-# Flight-Booking-Web-App
+# ✈️ Flight Booking Web App
 
-\# ✈️ Flight Booking Web App
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Full--Stack-Project-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/CDAC-PG--DAC-important?style=for-the-badge"/>
+</p>
 
-
-
-A modern, full‑stack \*\*Flight Ticket Booking Web Application\*\* that enables users to search, book, and manage flight tickets online with ease. Built using \*\*React.js\*\*, \*\*ASP.NET Core Web API\*\*, and \*\*MySQL\*\*, the system provides a secure, scalable, and user‑friendly solution for travel planning.
-
-
-
----
-
-
-
-\## 🚀 Features
-
-
-
-\- 🔐 \*\*User Authentication\*\* – Secure registration and login
-
-\- 🛫 \*\*Flight Search\*\* – Search flights by source, destination, and travel date
-
-\- 🎟️ \*\*Ticket Booking\*\* – Instant booking with integrated payment flow
-
-\- 📄 \*\*E‑Ticket Generation\*\* – Automatic electronic ticket creation
-
-\- 🛠️ \*\*Admin Dashboard\*\* – Manage flights, schedules, and availability
-
-\- ⚡ \*\*Responsive UI\*\* – Built with React.js for a smooth user experience
-
-
+<p align="center">
+  <b>A modern, full-stack flight ticket booking system built for real-world use cases.</b>
+</p>
 
 ---
 
+## 🧭 Overview
 
+**Flight Booking Web App** is a full-stack web application that allows users to **search, book, and manage flight tickets online**.  
+The system is designed with a **clean separation of concerns**, secure APIs, and a responsive frontend to simulate a real airline booking platform.
 
-\## 🛠️ Tech Stack
-
-
-
-| Layer            | Technology                  |
-
-|------------------|-----------------------------|
-
-| Frontend         | React.js                    |
-
-| Backend          | ASP.NET Core Web API (.NET 8) |
-
-| Database         | MySQL                       |
-
-| Hosting/Cloud    | Azure (App Service, MySQL DB) |
-
-
+Built using **React.js**, **ASP.NET Core Web API (.NET 8)**, and **MySQL**, the project demonstrates **end-to-end application development**, from UI to database.
 
 ---
 
+## ✨ Key Features
 
+- 🔐 **User Authentication**
+  - Secure user registration and login
+  - Token-based API access
 
-\## 🏗️ Architecture
+- 🛫 **Flight Search**
+  - Search flights by source, destination, and date
+  - Real-time availability from database
 
+- 🎟️ **Ticket Booking**
+  - Seat selection & booking flow
+  - Booking confirmation handling
 
+- 📄 **E-Ticket Generation**
+  - Automatic ticket creation after booking
+  - Booking details stored persistently
 
-The application follows a \*\*layered architecture\*\*:
+- 🛠️ **Admin Dashboard**
+  - Add/update flights and schedules
+  - Manage availability and pricing
 
-\- \*\*Presentation Layer\*\* – React.js frontend
-
-\- \*\*Business Logic Layer\*\* – ASP.NET Core Web API
-
-\- \*\*Data Access Layer\*\* – MySQL database
-
-
-
-This separation ensures \*\*scalability, maintainability, and security\*\*.
-
-
+- 📱 **Responsive UI**
+  - Optimized for desktop and mobile
+  - Smooth navigation with React
 
 ---
 
+## 🧠 Architecture & Design
 
+The application follows a **layered architecture**, commonly used in production systems:
 
-\## 📦 Installation \& Setup
-
-
-
-\### Prerequisites
-
-\- Node.js (v18+)
-
-\- .NET 8 SDK
-
-\- MySQL Server
-
-\- Git
-
-
-
-\### Steps
-
-1\. \*\*Clone the repository\*\*
-
-&nbsp;  ```bash
-
-&nbsp;  git clone https://github.com/<owner>/Flight-Booking-Web-App.git
-
-&nbsp;  cd Flight-Booking-Web-App
-
-
-
+```text
+Client (React.js)
+        ↓
+ASP.NET Core Web API
+        ↓
+MySQL Database
